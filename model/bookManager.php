@@ -42,6 +42,13 @@ class bookManager {
     return $result;
 
   }
+  public function deleteBook(int $bookID){
+    $query = $this->_db->prepare("DELETE FROM book WHERE bookID=:bookID");
+    $result = $query->execute([
+      "bookID" => $bookID
+    ]);
+    return $result;
+  }
 
 
   // Met à jour le statut d'un livre emprunté

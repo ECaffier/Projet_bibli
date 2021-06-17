@@ -7,41 +7,41 @@ class User {
     protected string $lastname;
     protected string $birthdate;
     protected string $email;
-    protected float $card_number;
+    protected int $card_number;
 
 
     public function setuserID(int $userID){
-        $this->bookID = $bookID;
+        $this->userID = $userID;
     }
     public function getuserID():int{
         return $this->userID;
     }
-    public function setFirstname(int $firstname){
+    public function setFirstname(string $firstname){
         $this->firstname = $firstname;
     }
-    public function getFirstname():int{
+    public function getFirstname():string{
         return $this->firstname;
     }
-    public function setLastname(int $lastname){
+    public function setLastname(string $lastname){
         $this->lastname = $lastname;
     }
-    public function getLastname():int{
+    public function getLastname():string{
         return $this->lastname;
     }
-    public function setBirthdate(int $birthdate){
+    public function setBirthdate(string $birthdate){
         $this->birthdate = $birthdate;
     }
-    public function getBirthdate():int{
+    public function getBirthdate():string{
         return $this->birthdate;
     }
-    public function setEmail(int $email){
+    public function setEmail(string $email){
         $this->email = $email;
     }
-    public function getEmail():int{
+    public function getEmail():string{
         return $this->email;
     }
     public function setCard_number(int $card_number){
-        $this->card_nummber = $card_number;
+        $this->card_number = $card_number;
     }
     public function getCard_number():int{
         return $this->card_number;

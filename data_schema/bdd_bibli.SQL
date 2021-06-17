@@ -8,7 +8,7 @@ CREATE TABLE bdd_bibli.user
     userID INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY, 
     firstname VARCHAR(100),
     lastname VARCHAR(100),
-    birhdate DATE, 
+    birthdate DATE, 
     email VARCHAR(100),
     card_number INT(100)    
 )
