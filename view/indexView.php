@@ -13,7 +13,8 @@ include "view/template/header.php";
                 <li class="list-group-item bg-secondary"><?php echo $book->getSummary()?></li>
                 <li class="list-group-item"><?php echo $book->getDisponibility()?></li>
                 <li class="list-group-item">
-                <a class="btn btn-warning  px-5" href="book.php?id=<?php echo $book->getBookID();?>">Voir</a>
+                    <a class="btn btn-warning  px-5" href="book.php?id=<?php echo $book->getBookID();?>">Voir</a>
+                </li>
             </ul>
         </div>
     <?php endforeach;?>

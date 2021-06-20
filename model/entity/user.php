@@ -13,7 +13,7 @@ class User {
     public function setuserID(int $userID){
         $this->userID = $userID;
     }
-    public function getuserID():int{
+    public function getuserID():int {
         return $this->userID;
     }
     public function setFirstname(string $firstname){

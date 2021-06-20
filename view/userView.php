@@ -4,7 +4,7 @@ include "view/template/header.php";
 
 if(isset($users)) :?>
 
-<div class="container">
+<div class="container text-center">
     <ul>
         <li class="list-group-item bg-secondary">Nom :  </br> <?php echo $users->getFirstname() . " " . $users->getLastname() ?></li>
         <li class="list-group-item">Date de naissance :  </br> <?php echo $users->getBirthdate()?></li>

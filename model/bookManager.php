@@ -24,9 +24,18 @@ class bookManager {
     $result = $query->fetch(PDO::FETCH_ASSOC);
     $result = new Book($result);
     return $result;
-    
-
   }
+
+  // public function getBook(int $bookID) {
+  //   $query = $this->_db->prepare("SELECT * FROM book LEFT JOIN user ON user.userID = book.userID WHERE bookID=:bookID");
+  //   $query->execute([
+  //     "bookID" => $bookID
+  //   ]);
+  //   $result = $query->fetch(PDO::FETCH_ASSOC);
+  //   $book = new Book($result);
+  //   $user = new User($result);
+  //   return array($book,$user);
+  // }
 
   // Ajoute un nouveau livre
   public function addBook(Book $newBook) {
@@ -52,16 +61,12 @@ class bookManager {
 
 
   // Met à jour le statut d'un livre emprunté
-  // public function updateBookStatus() {
-  //   $query = $this->_db->prepare("UPDATE book SET disponibility = indisponible")
-  //   $result = $query->execute();
-  //   return $result;
-  // }
 
-  public function updateBookStatus($disponibility, $bookID) {
-    $query = $this->_db->prepare("UPDATE book SET disponibility = :disponibility WHERE bookID= :bookID" );
+  public function updateBookStatus(Book $updateBook, $bookID) {
+    $query = $this->_db->prepare("UPDATE book SET disponibility = :disponibility, userID = :userID WHERE bookID= :bookID" );
     $result = $query->execute([
-      "disponibility"=>$disponibility->getDisponibility(),
+      "disponibility"=>$updateBook->getDisponibility(),
+      "userID" => $updateBook->getUserID(),
       "bookID" =>$bookID
 
     ]);

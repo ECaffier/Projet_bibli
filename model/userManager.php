@@ -7,7 +7,7 @@ class userManager {
 
   // Récupère tous les utilisateurs
   public function getUsers() {
-    $query = $this->_db->prepare("SELECT * FROM user");
+    $query = $this->_db->prepare("SELECT * FROM user WHERE userID>1");
     $query->execute();
     $result = $query->fetchAll(PDO::FETCH_ASSOC);
     foreach($result as $key=>$user){

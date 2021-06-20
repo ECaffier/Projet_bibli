@@ -28,6 +28,7 @@
 </head>
 <body>
   <header class="mb-5 bg-warning ">
+    <?php include ("nav.php") ?>
         <section class="top py-3">
           <div class="offset-1">
           <h1>La Bibliothèque d'Azeroth</h1>
