@@ -22,7 +22,9 @@ if(!empty($_POST)){
 
     $bookManager = new BookManager();
 
-    $bookManager->updateBookStatus($bookEdit);
+    $bookID = $_GET["id"];
+
+    $bookManager->updateBookStatus($bookEdit, $bookID);
 
 
 }

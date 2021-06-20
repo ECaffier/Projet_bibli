@@ -58,10 +58,11 @@ class bookManager {
   //   return $result;
   // }
 
-  public function updateBookStatus($disponibility) {
-    $query = $this->_db->prepare("UPDATE book SET disponibility = :disponibility");
+  public function updateBookStatus($disponibility, $bookID) {
+    $query = $this->_db->prepare("UPDATE book SET disponibility = :disponibility WHERE bookID= :bookID" );
     $result = $query->execute([
       "disponibility"=>$disponibility->getDisponibility(),
+      "bookID" =>$bookID
 
     ]);
     return $result;
