@@ -7,7 +7,7 @@ abstract class DataBase {
     const HOST = "localhost";
     const NAME = "bdd_bibli";
     const LOGIN = "root";
-    const PASSWORD = "";
+    const PASSWORD = "root";
 
     static public function getDB(){
         try{

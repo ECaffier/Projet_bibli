@@ -8,7 +8,7 @@ class Book {
     protected string $category;
     protected string $summary;
     protected string $disponibility;
-    protected ?int $userID;
+    protected $userID;
 
     public function setBookID(int $bookID){
         $this->bookID = $bookID;
@@ -52,10 +52,10 @@ class Book {
     public function getDisponibility():string{
         return $this->disponibility;
     }
-    public function setUserID(?int $userID){
+    public function setUserID($userID){
         $this->userID = $userID;
     }
-    public function getUserID():int{
+    public function getUserID(){
         return $this->userID;
     }
 
